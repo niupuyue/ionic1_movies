@@ -3,7 +3,7 @@
  */
 angular.module('welcome.controller', ['welcome.service'])
   .controller('WelcomeCtrl', function ($scope, $state) {
-    //这是tabs需要执行的操作
+    //此处检测当前网络环境
     $("#welcome_title").addClass("animated bounceInLeft");
     $('#welcome_subtitle').addClass('animated bounceInRight');
     setTimeout(function () {
