@@ -1,28 +1,6 @@
-Ionic App Base
-=====================
+介绍
 
-A starting project for Ionic that optionally supports using custom SCSS.
+使用ionic1  angular1 实现的电影应用APP，使用豆瓣电影API，使用了swiper，ioniclazyload等
 
-## Using this project
-
-We recommend using the [Ionic CLI](https://github.com/driftyco/ionic-cli) to create new Ionic projects that are based on this project but use a ready-made starter template.
-
-For example, to start a new Ionic project with the default tabs interface, make sure the `ionic` utility is installed:
-
-```bash
-$ npm install -g ionic
-```
-
-Then run: 
-
-```bash
-$ ionic start myProject tabs
-```
-
-More info on this can be found on the Ionic [Getting Started](http://ionicframework.com/getting-started) page and the [Ionic CLI](https://github.com/driftyco/ionic-cli) repo.
-
-## Issues
-Issues have been disabled on this repo, if you do find an issue or have a question consider posting it on the [Ionic Forum](http://forum.ionicframework.com/).  Or else if there is truly an error, follow our guidelines for [submitting an issue](http://ionicframework.com/submit-issue/) to the main Ionic repository.
-
-ʹ��ionic1  angular1 ʵ�ֵĵ�ӰӦ��APP��ʹ�ö����ӰAPI��ʹ����swiper��ioniclazyload��
+但是跨域请求的问题目前依然存在，所以需要自己使用eclipse启动后台服务，帮助数据请求，后续会不断改进
 
