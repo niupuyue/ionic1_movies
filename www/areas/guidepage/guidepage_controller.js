@@ -28,7 +28,7 @@ angular.module('guidepage.controller', ['guidepage.service'])
     // 跳转到主页方法
     $scope.func_goHome = function () {
       localStorage["isFirst"] = true;
-      $state.go('tabs.home');
+      $state.go('welcome');
     }
   })
 

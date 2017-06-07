@@ -8,7 +8,7 @@ angular.module('weekly.controller', ['weekly.service'])
     var movies = [];
 
     function getData() {
-      $http.get('http://192.168.30.134:8080/moviecat/gzmovie')
+      $http.get('http://127.0.0.1:8080/moviecat/gzmovie')
         .success(function (newItems) {
           $scope.weeklymovies = newItems.data.subjects;
         })

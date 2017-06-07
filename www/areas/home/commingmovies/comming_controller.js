@@ -8,7 +8,7 @@ angular.module('comming.controller', ['comming.service'])
     var movies = [];
 
     function getData() {
-      $http.get('http://192.168.30.134:8080/moviecat/commingmovie')
+      $http.get('http://127.0.0.1:8080/moviecat/commingmovie')
         .success(function (newItems) {
 
           $scope.commingmovies = newItems.data.subjects;
