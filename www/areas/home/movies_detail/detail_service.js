@@ -1,8 +1,8 @@
 /**
  * Created by Administrator on 2017/6/7.
  */
-angular.module('hot.service', [])
-  .factory('HotFty', function ($http) {
+angular.module('detail.service', [])
+  .factory('DetailFty', function ($http) {
     /**
      * 请求数据到service，然后执行响应的方法，返回给controller
      */

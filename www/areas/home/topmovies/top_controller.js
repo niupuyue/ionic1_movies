@@ -6,16 +6,19 @@ angular.module('top.controller', ['top.service'])
     //这是tabs需要执行的操作
     getData();
     var movies = [];
+
+    window.doubanMovieCallback = function (data) {
+      if (data.msg) {
+        //返回错误信息
+        // $scope.message = data.msg;
+        console.log(data.msg);
+      } else {
+        console.log(data);
+        $scope.topmovies = data.subjects;
+      }
+    }
     function getData() {
-      $http.get('http://127.0.0.1:8080/moviecat/topmovie')
-        .success(function (newItems) {
-
-          $scope.topmovies = newItems.data.subjects;
-
-        })
-        .error(function () {
-          console.log("访问失败");
-        })
+      $http.jsonp('https://api.douban.com/v2/movie/top250?callback=doubanMovieCallback')
         .finally(function () {
           $scope.$broadcast('scroll.refreshComplete');
           $ionicLoading.hide();

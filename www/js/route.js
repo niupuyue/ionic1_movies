@@ -9,7 +9,6 @@
  * details.route:电影详情
  * cart.route:已经看过的电影
  * account.route:个人信息
- * 'details.route',
  */
 angular.module('route', [
   'guidepage.route',
@@ -19,6 +18,7 @@ angular.module('route', [
   'likes.route',
   'carts.route',
   'account.route',
+  'detail.route',
 ])
   .config(function ($stateProvider, $urlRouterProvider) {
 
@@ -29,6 +29,5 @@ angular.module('route', [
     else {
       $urlRouterProvider.otherwise('/guidepage');
     }
-
 
   });

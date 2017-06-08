@@ -1,0 +1,51 @@
+.detail-box {
+  min-width: 300px;
+  max-width: 640px;
+  background-color: white;
+}
+.detail-biaoti {
+  width: 100%;
+  height: 40px;
+  line-height: 40px;
+  background-color: #ff8b2b;
+  display: flex;
+  color: white;
+}
+.detail-biaoti .detail-biaoti-c {
+  text-align: center;
+}
+.detail-biaoti .detail-biaoti-c span {
+  font-size: 16px;
+}
+.detail-xiangqing {
+  margin-left: 12px;
+  margin-top: 12px;
+}
+.detail-xiangqing p {
+  font-size: 12px;
+}
+.detail-juqing {
+  margin: 0 12px;
+}
+.detail-juqing p:last-child {
+  font-size: 12px;
+}
+.detail-ssss span {
+  font-size: 20px;
+  color: #ff0000;
+  padding: 0 6px 0 16px;
+}
+.detail-juzhao {
+  display: flex;
+  justify-content: space-between;
+}
+.jdetail-uzhao .detail-myjuzhao:last-child {
+  margin-right: 10px;
+}
+.detail-juzhao .detail-myjuzhao {
+  margin-left: 10px;
+  margin-top: 10px;
+}
+.detail-juzhao img {
+  width: 100%;
+}

@@ -1,0 +1,44 @@
+<div class="detail-box">
+  <div class="detail-biaoti">
+    <div class="detail-biaoti-l">
+      <a href="javascript:history.back()"><img src="../../../img/back.png" alt=""/></a>
+    </div>
+    <div class="detail-biaoti-c">
+      <span>{{movie.title}}</span><br/>
+    </div>
+  </div>
+  <div class="detail-xiangqing">
+    <p>导演：<span ng-repeat="director in movie.directors">{{director.name}}{{$last?'':'、'}}</span></p>
+    <p>主演：<span ng-repeat="cast in movie.casts">{{cast.name}}{{$last?'':'、'}}</span></p>
+    <p>类型：<span>{{movie.genres.join('、')}}</span></p>
+    <p>地区：{{movie.countries[0]}}</p>
+    <p>评分：{{movie.rating.average}}</p>
+    <p>搜藏：{{movie.collect_count}}</p>
+    <p>首映：{{movie.year}}</p>
+  </div>
+  <div class="detail-juqing">
+    <p>剧情介绍</p>
+    <p>
+      {{movie.summary}}
+    </p>
+  </div>
+  <div class="detail-ssss">
+    <div class="detail-juzhao">
+      <div class="detail-myjuzhao">
+        <img ng-src="{{movie.images.small}}" alt=""/>
+      </div>
+      <div class="detail-myjuzhao">
+        <img ng-src="{{movie.casts[0].avatars.small}}" alt=""/>
+      </div>
+      <div class="detail-myjuzhao">
+        <img ng-src="{{movie.casts[1].avatars.small}}" alt=""/>
+      </div>
+      <div class="detail-myjuzhao">
+        <img ng-src="{{movie.casts[2].avatars.small}}" alt=""/>
+      </div>
+      <div class="detail-myjuzhao">
+        <img ng-src="{{movie.directors[0].avatars.small}}" alt=""/>
+      </div>
+    </div>
+  </div>
+</div>

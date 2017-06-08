@@ -8,13 +8,17 @@ angular.module('weekly.controller', ['weekly.service'])
     var movies = [];
 
     function getData() {
-      $http.get('http://127.0.0.1:8080/moviecat/gzmovie')
-        .success(function (newItems) {
-          $scope.weeklymovies = newItems.data.subjects;
-        })
-        .error(function () {
-          console.log("访问失败");
-        })
+      window.doubanMovieCallback = function (data) {
+        if (data.msg) {
+          //返回错误信息
+          console.log(data.msg);
+        } else {
+          // console.log(data.subjects[0].subject.id);
+          $scope.weeklymovies = data.subjects;
+        }
+      }
+
+      $http.jsonp('https://api.douban.com/v2/movie/us_box?callback=doubanMovieCallback')
         .finally(function () {
           $scope.$broadcast('scroll.refreshComplete');
           $ionicLoading.hide();
